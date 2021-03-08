@@ -1,0 +1,20 @@
+EBITDA =
+CALCULATE (
+    SUM ( 'Sample'[Value] ),
+    FILTER ( 'Sample', 'Sample'[L1] IN { "Salaries", "Other overheads" } )
+) - [Gross profit]
+#################################################################################
+Grossprofit =
+CALCULATE (
+    SUM ( 'Sample'[Value] ),
+    FILTER ( 'Sample', 'Sample'[L1] IN { "Turnover", "Cost of Sales" } )
+)
+#################################################################################
+Netprofit =
+CALCULATE (
+    SUM ( 'Sample'[Value] ),
+    FILTER (
+        'Sample',
+        'Sample'[L1] IN { "Non trading/exceptional", "Depreciation", "Tax" }
+    )
+) - [EBITDA]
