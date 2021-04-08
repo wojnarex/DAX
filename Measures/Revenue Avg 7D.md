@@ -1,4 +1,4 @@
-Revenue Avg 7D =
+   Revenue Avg 7D =
 VAR MaxDate = MAX ( 'Dates'[Date] )
 VAR AvgVal =
 CALCULATE (
