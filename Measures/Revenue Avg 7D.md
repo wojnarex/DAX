@@ -1,4 +1,5 @@
 ```sql
+#####1#######
 Revenue Avg 7D =
 VAR MaxDate = MAX ( 'Dates'[Date] )
 VAR AvgVal =
@@ -11,6 +12,7 @@ DATESINPERIOD ( Dates[Date], MaxDate, -7, DAY )
 )
 RETURN
 AvgVal
+#######2#######
 Revenue Diff 7D =
 VAR CurrVal = [Revenue]
 VAR AvgVal = [Revenue Avg 7D]
