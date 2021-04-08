@@ -1,4 +1,5 @@
-   Revenue Avg 7D =
+```sql
+Revenue Avg 7D =
 VAR MaxDate = MAX ( 'Dates'[Date] )
 VAR AvgVal =
 CALCULATE (
@@ -15,3 +16,4 @@ VAR CurrVal = [Revenue]
 VAR AvgVal = [Revenue Avg 7D]
 RETURN
 CurrVal - AvgVal
+```
