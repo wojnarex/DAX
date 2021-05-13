@@ -1,0 +1,12 @@
+tblSummary =
+SUMMARIZE (
+    FILTER('tblInventory', NOT ( 'tblInventory'[Location] IN`{ "Loc1ToExclude", "Loc2ToExclude", "...."})), 
+    'mtblInventory'[SKU],
+    'tblInventory'[3KU],
+    'mmjboost_neta_2 ll_inventory'[ProductDesc],
+    'tblInventory'[Indication],
+    'tblInventory'[Category],
+    "sWgt", SUM ( 'tblInventory'[wqt] ),
+    "sQTY", SUM ( 'tblInventory'[Qty] ),
+    "sTotQty", SUM ( 'tblInventory'[Total Qty] )
+)
